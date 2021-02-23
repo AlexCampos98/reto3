@@ -1,0 +1,52 @@
+﻿<Window x:Class="reto3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:reto3"
+        mc:Ignorable="d"
+        Title="Radio Buttons y Cajas de Mensajes" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="185*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Elige el Tipo MessageBox para poder visualizarlo" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <GroupBox Name="gbTipo" Grid.Column="1" Header="Tipo de botón" HorizontalAlignment="Left" Height="108" Margin="10,82,0,0" VerticalAlignment="Top" Width="138">
+            <Grid Margin="2,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="rbOk" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="rbOkCancel" Content="OK/Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
+                <RadioButton x:Name="rbYesNo" Content="Yes/No" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
+                <RadioButton x:Name="rbYesNoCancel" Content="Yes/No/Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Name="gbIcono" Grid.Column="1" Header="Icono" HorizontalAlignment="Left" Height="108" Margin="177,82,0,0" VerticalAlignment="Top" Width="210">
+            <Grid HorizontalAlignment="Right" Margin="0,5,2,5" Width="188">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton x:Name="rbInformacion" Content="Información" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="rbExclamacion" Content="Exclamación" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top"/>
+                <RadioButton x:Name="rbPregunta" Content="Pregunta" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top"/>
+                <RadioButton x:Name="rbError" Content="Error" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <Label Content="Titulo" HorizontalAlignment="Left" Margin="10,249,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="Mensaje" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox Name="tbTitulo" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="108,253,0,0" TextWrapping="Wrap" Text="Titulo del Mensaje" VerticalAlignment="Top" Width="361"/>
+        <TextBox Name="tbMensaje" Grid.Column="1" HorizontalAlignment="Left" Height="33" Margin="108,310,0,0" TextWrapping="Wrap" Text="Mensaje" VerticalAlignment="Top" Width="361"/>
+        <Button Name="btnVisualizar" Content="Visualizar" Grid.Column="1" HorizontalAlignment="Left" Margin="535,260,0,0" VerticalAlignment="Top" Width="75" Click="BtnVisualizar_Click"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="10,358,0,0" TextWrapping="Wrap" Text="Resultado:" VerticalAlignment="Top" Width="210" IsEnabled="False"/>
+        <Label x:Name="tbResultado" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="259,358,0,0" VerticalAlignment="Top" Height="25" Width="183" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
